@@ -127,10 +127,11 @@ ln -sf ../../scripts/check-personal.sh .git/hooks/pre-commit
 
 ## About
 
-I'm Mehmet Mutlu, a senior software engineer based in London. Six years of turning ideas into real
-products, from UI/UX design roots to leading frontend architecture at scale. A lot of my work now runs
-through AI workflows built on Claude, and this repo is where I share the pieces that proved useful
-day to day.
+I'm Mehmet Mutlu, a London-based software engineer with 10+ years of building for the web, now
+focused on AI. I was an early adopter of AI in day-to-day engineering and became my team's AI
+advocate, building agentic workflows that were adopted by teams and professionals. Today I build AI
+tools for teams, engineers, designers and professionals, and AI-native solutions for businesses with
+complex workflows. This repo is where I share the pieces that proved useful day to day.
 
 - Portfolio: [mehmetmutlu.dev](https://www.mehmetmutlu.dev)
 - LinkedIn: [Mehmet Mutlu](https://www.linkedin.com/in/mehmet-mutlu-03aa7319a/)
