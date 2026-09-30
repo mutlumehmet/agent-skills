@@ -125,7 +125,7 @@ ln -sf ../../scripts/check-personal.sh .git/hooks/pre-commit
 
 ## About
 
-I'm Mehmet Mutlu, a senior software engineer based in the UK. Six years of turning ideas into real
+I'm Mehmet Mutlu, a senior software engineer based in London. Six years of turning ideas into real
 products, from UI/UX design roots to leading frontend architecture at scale. A lot of my work now runs
 through AI workflows built on Claude, and this repo is where I share the pieces that proved useful
 day to day.
