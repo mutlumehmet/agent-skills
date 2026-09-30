@@ -5,7 +5,7 @@
 #   ${AGENT_SKILLS_FORBIDDEN:-~/.config/agent-skills/forbidden.txt}
 # Put your email addresses, usernames, home path, client and project names there.
 #
-# A few files legitimately credit the author (LICENSE, README.md, the plugin manifest, FUNDING.yml). In those
+# A few files legitimately credit the author (LICENSE, the READMEs, the plugin manifest, FUNDING.yml). In those
 # files only, patterns listed in the author list are allowed; everything else is still checked:
 #   ${AGENT_SKILLS_AUTHOR:-~/.config/agent-skills/author.txt}
 #
@@ -20,7 +20,7 @@ set -uo pipefail
 LIST="${AGENT_SKILLS_FORBIDDEN:-$HOME/.config/agent-skills/forbidden.txt}"
 AUTHOR_LIST="${AGENT_SKILLS_AUTHOR:-$HOME/.config/agent-skills/author.txt}"
 # Files allowed to name the author
-CREDIT_FILES='^(LICENSE|README\.md|\.claude-plugin/marketplace\.json|\.github/FUNDING\.yml)$'
+CREDIT_FILES='^(LICENSE|README\.md|skills/[^/]+/README\.md|\.claude-plugin/marketplace\.json|\.github/FUNDING\.yml)$'
 
 if [ ! -f "$LIST" ]; then
   echo "check-personal: no forbidden list at $LIST, skipping (create one to enable the check)" >&2

@@ -12,6 +12,7 @@ and is self-contained. Fixed context lives in this file, current state in `STATU
 |---|---|
 | `skills/<name>/SKILL.md` | The skill itself: YAML frontmatter (`name`, `description`) and instructions |
 | `skills/<name>/...` | Anything the skill needs: scripts, templates, reference files |
+| `skills/<name>/README.md` | The skill's own page: what it does, settings, install |
 | `skills/<name>/config.example.yaml` | For configurable skills: every setting, commented, with defaults |
 
 ## Rules for every skill in this repo
@@ -29,8 +30,13 @@ and is self-contained. Fixed context lives in this file, current state in `STATU
 - **English only**, in skill text, templates, triggers and docs.
 - **No em dashes, en dashes or double hyphens** in anything written. Use commas, colons, parentheses
   or a new sentence.
-- **Each skill has a README section** covering what it does, how to install it, every config key
-  (what it is for, required or optional, default, example), and what it will never do.
+- **Each skill has its own `skills/<name>/README.md`** covering what it does (with a visual if it
+  helps), first run, every config key (what it is for, required or optional, default, example),
+  optional integrations, what it will never do, requirements and its exact install commands. GitHub
+  shows it when someone opens the folder.
+- **The main `README.md` stays short:** banner, intro, one table row per skill (name linking to its
+  folder, one-line description), generic install, contributing, about, license. Skill details never
+  go into the main README.
 - Never commit `.env`, config files with real values, or OS junk (`.DS_Store`).
 
 ## Adding or updating a skill
@@ -40,4 +46,6 @@ and is self-contained. Fixed context lives in this file, current state in `STATU
 2. Scan for anything personal before committing (see the rule above). A useful check:
    `grep -rniE "@|/Users/|/home/|token|secret" skills/<name>`.
 3. Test it on a throwaway target before calling it done.
-4. Update the README index and `STATUS.md`.
+4. Write `skills/<name>/README.md`, add the skill's row to the main README table, add it to
+   `.claude-plugin/marketplace.json`, update the banner's skill chips if they list skills, and update
+   `STATUS.md`.
