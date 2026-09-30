@@ -1,5 +1,8 @@
 # agent-skills
 
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support-d97757?logo=buymeacoffee&logoColor=white)](https://buymeacoffee.com/mutlumehmet)
+[![License: MIT](https://img.shields.io/badge/license-MIT-629987)](LICENSE)
+
 Agent Skills I use every day with Claude, cleaned up so they work on anyone's machine.
 
 A skill is a folder with a `SKILL.md` file: instructions, plus small scripts where needed, that Claude
@@ -37,6 +40,8 @@ Then run `/create-project`, or ask Claude to "set up a new project for my house 
 ---
 
 ## create-project
+
+![create-project: asks, builds, ready](docs/images/create-project-flow.png)
 
 I start a separate folder for everything I get AI help with: code, but also family paperwork,
 accounting, a house move. This skill makes every one of them start the same way, so that a new agent
@@ -118,6 +123,20 @@ own list of personal terms (kept outside the repo). Install it with:
 ln -sf ../../scripts/check-personal.sh .git/hooks/pre-commit
 ```
 
+## About
+
+I'm Mehmet Mutlu, a senior software engineer based in the UK. Six years of turning ideas into real
+products, from UI/UX design roots to leading frontend architecture at scale. A lot of my work now runs
+through AI workflows built on Claude, and this repo is where I share the pieces that proved useful
+day to day.
+
+- Portfolio: [mehmetmutlu.dev](https://www.mehmetmutlu.dev)
+- LinkedIn: [Mehmet Mutlu](https://www.linkedin.com/in/mehmet-mutlu-03aa7319a/)
+- X: [@findmutlu](https://x.com/findmutlu)
+- GitHub: [@mutlumehmet](https://github.com/mutlumehmet)
+
+If a skill here saves you some time, you can [buy me a coffee](https://buymeacoffee.com/mutlumehmet).
+
 ## License
 
-[MIT](LICENSE), by Mehmet Mutlu ([@mutlumehmet](https://github.com/mutlumehmet)).
+[MIT](LICENSE)
