@@ -1,0 +1,16 @@
+# Personal project settings, machine-specific
+.claude/settings.local.json
+
+# Office lock files
+~$*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Secrets
+.env
+
+# Personal notes for the local agent, never published
+CLAUDE.local.md
