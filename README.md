@@ -2,6 +2,7 @@
 
 ![agent-skills: skills I use every day with Claude](docs/images/banner.png)
 
+[![Sponsor](https://img.shields.io/badge/Sponsor-GitHub-827dbd?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/mutlumehmet)
 [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support-d97757?logo=buymeacoffee&logoColor=white)](https://buymeacoffee.com/mutlumehmet)
 [![License: MIT](https://img.shields.io/badge/license-MIT-629987)](LICENSE)
 
@@ -129,16 +130,16 @@ ln -sf ../../scripts/check-personal.sh .git/hooks/pre-commit
 
 I'm Mehmet Mutlu, a London-based software engineer with 10+ years of building for the web, now
 focused on AI. I was an early adopter of AI in day-to-day engineering and became my team's AI
-advocate, building agentic workflows that were adopted by teams and professionals. Today I build AI
-tools for teams, engineers, designers and professionals, and AI-native solutions for businesses with
-complex workflows. This repo is where I share the pieces that proved useful day to day.
+advocate, building agentic workflows that were adopted by teams and professionals. Today I build
+AI-native solutions for businesses with complex workflows, and AI tools for teams, engineers,
+designers and professionals. This repo is where I share the pieces that proved useful day to day.
 
 - Portfolio: [mehmetmutlu.dev](https://www.mehmetmutlu.dev)
 - LinkedIn: [Mehmet Mutlu](https://www.linkedin.com/in/mehmet-mutlu-03aa7319a/)
 - X: [@findmutlu](https://x.com/findmutlu)
 - GitHub: [@mutlumehmet](https://github.com/mutlumehmet)
 
-If a skill here saves you some time, you can [buy me a coffee](https://buymeacoffee.com/mutlumehmet).
+If a skill here saves you some time, you can [sponsor me on GitHub](https://github.com/sponsors/mutlumehmet) or [buy me a coffee](https://buymeacoffee.com/mutlumehmet).
 
 ## License
 
