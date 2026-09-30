@@ -1,0 +1,59 @@
+# create-project settings
+#
+# Copy to ~/.config/create-project/config.yaml, or let the skill write it for you on first run.
+# Every key is optional: leave a value empty (or delete the line) and the skill uses the default
+# or skips that step. Set CREATE_PROJECT_CONFIG to use a different file.
+
+# Where new project folders are created.
+# Default: ~/Projects
+projects_root: ~/Projects
+
+# Languages you write project docs in (CLAUDE.md, STATUS.md). The skill asks which one per project
+# and uses the first as the suggested answer. Only English templates ship with the skill; for other
+# languages, put your own in templates_dir (see below) or the skill translates the English ones.
+# Default: [English]
+languages:
+  - English
+
+# Offer to write {"language": "<doc language>"} into the project's .claude/settings.local.json
+# when the docs are not in English, so Claude answers in that language inside that folder only.
+# Note: in Claude Code this one key sets both the reply language and voice dictation.
+# Default: true
+offer_claude_language: true
+
+# OPTIONAL. A synced cloud folder (OneDrive, Google Drive, Dropbox, iCloud Drive...) that holds
+# each project's heavy or sensitive files: PDFs, scans, contracts, audio, video. The project gets
+# an assets/ symlink into <path>/<project>/assets, which is always gitignored.
+# Leave path empty to never offer an assets folder.
+storage:
+  label: ""        # shown in docs, e.g. "Google Drive"
+  path: ""         # e.g. ~/Library/CloudStorage/GoogleDrive-you@example.com/My Drive/project-assets
+
+# OPTIONAL. GitHub, through the gh CLI.
+# With no accounts listed, the skill uses whatever gh is logged in as, or offers local git only if
+# gh is not set up. With more than one account listed, it checks the active one before creating a
+# repo, because `gh repo create` silently uses whichever account is active.
+github:
+  accounts: []          # e.g. [your-username, your-work-username]
+  default: ""           # the account new repos are created under
+  visibility: private   # private or public. Public is never used unless you ask for it.
+
+# OPTIONAL. Only if you run more than one Claude account on this machine and use a tool that
+# assigns a folder to an account. The skill asks which account, then runs the command with
+# {path} and {account} filled in. Leave command empty to skip this step entirely.
+claude_accounts:
+  command: ""           # e.g. my-account-switcher set {path} {account}
+  accounts: []          # e.g. [work, personal]
+
+# OPTIONAL. A single markdown file that lists every project folder, one table row each. The skill
+# adds a row for the new project. check_command, if set, is run afterwards to verify the file.
+# Leave file empty to skip.
+registry:
+  file: ""              # e.g. ~/Projects/README.md
+  columns: [Folder, For, Live]
+  check_command: ""
+
+# OPTIONAL. Your own document templates. The skill looks for CLAUDE.<language>.md and
+# STATUS.<language>.md here (language in lower case, e.g. CLAUDE.german.md) before falling back
+# to the English templates that ship with the skill.
+templates_dir: ""
