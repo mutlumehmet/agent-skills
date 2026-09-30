@@ -1,0 +1,16 @@
+{
+  "name": "mutlumehmet-agent-skills",
+  "description": "Agent Skills for everyday work with Claude",
+  "owner": {
+    "name": "Mehmet Mutlu"
+  },
+  "plugins": [
+    {
+      "name": "create-project",
+      "description": "Sets up a new project folder the same way every time: asks a few questions, then creates the folder, an optional cloud-synced assets folder git never sees, CLAUDE.md and STATUS.md, and an optional private GitHub repo.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/create-project"]
+    }
+  ]
+}

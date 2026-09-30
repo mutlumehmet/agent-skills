@@ -5,6 +5,10 @@
 #   ${AGENT_SKILLS_FORBIDDEN:-~/.config/agent-skills/forbidden.txt}
 # Put your email addresses, usernames, home path, client and project names there.
 #
+# A few files legitimately credit the author (LICENSE, README.md, the plugin manifest). In those
+# files only, patterns listed in the author list are allowed; everything else is still checked:
+#   ${AGENT_SKILLS_AUTHOR:-~/.config/agent-skills/author.txt}
+#
 # Install as a pre-commit hook:
 #   ln -sf ../../scripts/check-personal.sh .git/hooks/pre-commit
 #
@@ -14,8 +18,9 @@
 set -uo pipefail
 
 LIST="${AGENT_SKILLS_FORBIDDEN:-$HOME/.config/agent-skills/forbidden.txt}"
+AUTHOR_LIST="${AGENT_SKILLS_AUTHOR:-$HOME/.config/agent-skills/author.txt}"
 # Files allowed to name the author
-ALLOW='^(LICENSE)$'
+CREDIT_FILES='^(LICENSE|README\.md|\.claude-plugin/marketplace\.json)$'
 
 if [ ! -f "$LIST" ]; then
   echo "check-personal: no forbidden list at $LIST, skipping (create one to enable the check)" >&2
@@ -24,6 +29,14 @@ fi
 
 patterns=$(grep -vE '^\s*(#|$)' "$LIST")
 [ -n "$patterns" ] || exit 0
+author=""
+[ -f "$AUTHOR_LIST" ] && author=$(grep -vE '^\s*(#|$)' "$AUTHOR_LIST")
+# Forbidden patterns minus the author ones, for credit files
+if [ -n "$author" ]; then
+  credit_patterns=$(printf '%s\n' "$patterns" | grep -vxF -f <(printf '%s\n' "$author") || true)
+else
+  credit_patterns="$patterns"
+fi
 
 if [ "${1:-}" = "--all" ]; then
   files=$(git ls-files)
@@ -34,14 +47,16 @@ fi
 found=0
 while IFS= read -r f; do
   [ -n "$f" ] || continue
-  [[ "$f" =~ $ALLOW ]] && continue
+  use="$patterns"
+  [[ "$f" =~ $CREDIT_FILES ]] && use="$credit_patterns"
+  [ -n "$use" ] || continue
   if [ "${1:-}" = "--all" ]; then
     content=$(cat "$f" 2>/dev/null)
   else
     # Only lines this commit adds
     content=$(git diff --cached -U0 -- "$f" | grep '^+' | grep -v '^+++')
   fi
-  hits=$(printf '%s\n' "$content" | grep -niE -f <(printf '%s\n' "$patterns") || true)
+  hits=$(printf '%s\n' "$content" | grep -niE -f <(printf '%s\n' "$use") || true)
   if [ -n "$hits" ]; then
     echo "check-personal: personal content in $f:" >&2
     printf '%s\n' "$hits" | head -5 | sed 's/^/    /' >&2

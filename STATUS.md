@@ -8,17 +8,17 @@ scenarios (no config, full config, minimal config) and in daily use. Not public 
 | Item | State |
 |---|---|
 | Repository | Private on GitHub for now, to be made public once the first skill is reviewed |
-| License | MIT, **not added yet** |
-| README | **Not written yet** |
+| License | MIT, added |
+| README | Written: index, install, config reference, optional integrations |
 | `create-project` | Written and tested: configurable storage, GitHub accounts, languages, optional account tool and registry |
 | Personal-content check | `scripts/check-personal.sh`, installed as a pre-commit hook |
-| Plugin marketplace manifest | **Not added yet** (`.claude-plugin/marketplace.json`) |
+| Plugin marketplace manifest | Added, passes `claude plugin validate` |
 
 ## Next actions
 
-1. Write the README (index, install, config reference) and add the MIT `LICENSE`.
-2. Add the marketplace manifest so it can be installed with `/plugin marketplace add`.
-3. Review, then make the repository public.
+1. Author review.
+2. Make the repository public.
+3. After it is public, test the install commands from the README on a clean setup.
 
 ## Decision log
 
