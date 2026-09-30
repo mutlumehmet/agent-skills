@@ -1,5 +1,7 @@
 # agent-skills
 
+![agent-skills: skills I use every day with Claude](docs/images/banner.png)
+
 [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support-d97757?logo=buymeacoffee&logoColor=white)](https://buymeacoffee.com/mutlumehmet)
 [![License: MIT](https://img.shields.io/badge/license-MIT-629987)](LICENSE)
 
