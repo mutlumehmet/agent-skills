@@ -30,10 +30,13 @@ and is self-contained. Fixed context lives in this file, current state in `STATU
 - **English only**, in skill text, templates, triggers and docs.
 - **No em dashes, en dashes or double hyphens** in anything written. Use commas, colons, parentheses
   or a new sentence.
-- **Each skill has its own `skills/<name>/README.md`** covering what it does (with a visual if it
-  helps), first run, every config key (what it is for, required or optional, default, example),
-  optional integrations, what it will never do, requirements and its exact install commands. GitHub
-  shows it when someone opens the folder.
+- **Each skill has its own `skills/<name>/README.md`** covering what it does, first run,
+  every config key (what it is for, required or optional, default, example), optional
+  integrations, what it will never do, requirements and its exact install commands. GitHub shows it
+  when someone opens the folder.
+- **Every skill README opens with a visual**, right under the intro: a flow diagram or cover in
+  `docs/images/<name>-flow.png`, in the same style as the others. It is required, not optional; a
+  skill is not ready to publish without it. Make it once and reuse it for the skill's social posts.
 - **The main `README.md` stays short:** banner, intro, one table row per skill (name linking to its
   folder, one-line description), generic install, contributing, about, license. Skill details never
   go into the main README.
@@ -46,6 +49,7 @@ and is self-contained. Fixed context lives in this file, current state in `STATU
 2. Scan for anything personal before committing (see the rule above). A useful check:
    `grep -rniE "@|/Users/|/home/|token|secret" skills/<name>`.
 3. Test it on a throwaway target before calling it done.
-4. Write `skills/<name>/README.md`, add the skill's row to the main README table, add it to
+4. Make the visual (`docs/images/<name>-flow.png`), write `skills/<name>/README.md` with it at the
+   top, add the skill's row to the main README table, add it to
    `.claude-plugin/marketplace.json`, update the banner's skill chips if they list skills, and update
    `STATUS.md`.
