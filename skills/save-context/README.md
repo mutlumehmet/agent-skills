@@ -3,6 +3,8 @@
 Saves what a working session decided, changed and learned, so the next conversation starts with it
 already in context. Part of [agent-skills](../../README.md).
 
+![save-context: harvests, saves, ready](../../docs/images/save-context-flow.png)
+
 At the end of every session I used to ask the same question: "did you update everything? Status,
 memory, whatever the next session needs?" The answer was usually "mostly". This skill turns that
 question into a routine with a plan you approve before anything is written.
