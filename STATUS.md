@@ -1,7 +1,7 @@
 # agent-skills: current state
 
-Last updated: **30 September 2026**. First skill, `create-project`, written, tested in three
-scenarios (no config, full config, minimal config) and in daily use. Public since 30 September 2026.
+Last updated: **1 October 2026**. Two skills: `create-project` (public since 30 September 2026) and
+`save-context` (added 1 October 2026, tested with no config, a full config and `commit: false`).
 
 ## At a glance
 
@@ -13,6 +13,7 @@ scenarios (no config, full config, minimal config) and in daily use. Public sinc
 | README | Written: index, install, config reference, optional integrations |
 | `create-project` | Written and tested: configurable storage, GitHub accounts, languages, optional account tool and registry |
 | Personal-content check | `scripts/check-personal.sh`, installed as a pre-commit hook |
+| `save-context` | Written and tested: optional `tasks_skill` and `commit` settings, works with no config |
 | Plugin marketplace manifest | Added, passes `claude plugin validate` |
 
 ## Next actions
@@ -26,5 +27,6 @@ scenarios (no config, full config, minimal config) and in daily use. Public sinc
   brings every skill, and larger standalone tools get their own repositories.
 - **30 September 2026:** MIT license. English only. Per-user values live in a config file outside the
   repo, so the published skill and its author's own copy share the same code.
+- **1 October 2026:** `save-context` added. Banner re-rendered with its chip.
 - **30 September 2026:** Made public. Install commands from the README tested on a clean setup:
   marketplace add, plugin install, and a plain clone all work.

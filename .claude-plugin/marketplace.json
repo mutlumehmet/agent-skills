@@ -10,7 +10,18 @@
       "description": "Sets up a new project folder the same way every time: asks a few questions, then creates the folder, an optional cloud-synced assets folder git never sees, CLAUDE.md and STATUS.md, and an optional private GitHub repo.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/create-project"]
+      "skills": [
+        "./skills/create-project"
+      ]
+    },
+    {
+      "name": "save-context",
+      "description": "Before you close a session, saves what it decided, changed and left open: shows one plan, writes STATUS.md, memory and registers after approval, hands items to the skills that own them, and commits only what it touched without pushing.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/save-context"
+      ]
     }
   ]
 }

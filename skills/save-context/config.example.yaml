@@ -1,0 +1,16 @@
+# save-context settings
+#
+# Copy to ~/.config/save-context/config.yaml if you want to change a default.
+# Every key is optional, and the skill works with no file at all.
+# Set SAVE_CONTEXT_CONFIG to use a different file.
+
+# OPTIONAL. The skill that records dated promises and to-dos, for example a Notion or Todoist task
+# skill you already have. When set, "send the client the roster by Friday" is handed to that skill.
+# Leave empty and such items go to STATUS.md under next steps.
+# Default: empty
+tasks_skill: ""
+
+# Commit the files the skill touched at the end of a run (only those files, never git add -A).
+# Set to false to leave them uncommitted. The skill never pushes, whatever this says.
+# Default: true
+commit: true

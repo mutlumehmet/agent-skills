@@ -19,6 +19,7 @@ Each skill has its own page with what it does, its settings and what it will nev
 | Skill | What it does |
 |---|---|
 | [`create-project`](skills/create-project) | Sets up a new project folder the same way every time, for code or for a folder of notes and documents: asks a few questions, keeps heavy and sensitive files out of git, writes `CLAUDE.md` and `STATUS.md` |
+| [`save-context`](skills/save-context) | Before you close a session, saves what it decided, changed and left open to the right places (`STATUS.md`, memory, registers, other skills), after you approve one plan, so the next session starts with it in context |
 
 ## Install
 
