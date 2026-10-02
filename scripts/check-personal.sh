@@ -51,6 +51,8 @@ while IFS= read -r f; do
   [[ "$f" =~ $CREDIT_FILES ]] && use="$credit_patterns"
   [ -n "$use" ] || continue
   if [ "${1:-}" = "--all" ]; then
+    # Skip binary files (images, PDFs): their bytes can match a pattern by chance
+    grep -qI . "$f" 2>/dev/null || continue
     content=$(cat "$f" 2>/dev/null)
   else
     # Only lines this commit adds
