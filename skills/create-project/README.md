@@ -91,3 +91,9 @@ ln -s "$PWD/agent-skills/skills/create-project" ~/.claude/skills/create-project
 ```
 
 Then run `/create-project`, or ask Claude to "set up a new project for my house move".
+
+## About
+
+[![Mehmet Mutlu: work that's shipped, at mehmetmutlu.dev](../../docs/images/site-banner.png)](https://www.mehmetmutlu.dev)
+
+Made by Mehmet Mutlu, part of [agent-skills](../../README.md). More of his work at [mehmetmutlu.dev](https://www.mehmetmutlu.dev). If it saves you time, you can [sponsor me on GitHub](https://github.com/sponsors/mutlumehmet) or [buy me a coffee](https://buymeacoffee.com/mutlumehmet).
