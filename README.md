@@ -57,6 +57,8 @@ ln -sf ../../scripts/check-personal.sh .git/hooks/pre-commit
 
 ## About
 
+[![Mehmet Mutlu: work that's shipped, at mehmetmutlu.dev](docs/images/site-banner.png)](https://www.mehmetmutlu.dev)
+
 I'm Mehmet Mutlu, a London-based software engineer with 10+ years of building for the web, now
 focused on AI. I was an early adopter of AI in day-to-day engineering and became my team's AI
 advocate, building agentic workflows that were adopted by teams and professionals. Today I build
