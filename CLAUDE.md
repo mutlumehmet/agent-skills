@@ -37,6 +37,9 @@ and is self-contained. Fixed context lives in this file, current state in `STATU
 - **Every skill README opens with a visual**, right under the intro: a flow diagram or cover in
   `docs/images/<name>-flow.png`, in the same style as the others. It is required, not optional; a
   skill is not ready to publish without it. Make it once and reuse it for the skill's social posts.
+- **Every README ends with an About section** that shows `docs/images/site-banner.png` linked to
+  the author's site (in a skill README the path is `../../docs/images/site-banner.png`), then a line
+  with the author, the site and the sponsor links. The site URL is in `CLAUDE.local.md`.
 - **The main `README.md` stays short:** banner, intro, one table row per skill (name linking to its
   folder, one-line description), generic install, contributing, about, license. Skill details never
   go into the main README.
@@ -50,6 +53,6 @@ and is self-contained. Fixed context lives in this file, current state in `STATU
    `grep -rniE "@|/Users/|/home/|token|secret" skills/<name>`.
 3. Test it on a throwaway target before calling it done.
 4. Make the visual (`docs/images/<name>-flow.png`), write `skills/<name>/README.md` with it at the
-   top, add the skill's row to the main README table, add it to
+   top and the About banner at the end, add the skill's row to the main README table, add it to
    `.claude-plugin/marketplace.json`, update the banner's skill chips if they list skills, and update
    `STATUS.md`.
